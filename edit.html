@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Contact Us</title>
+    <title>Edit Contact</title>
 
     <!-- CSS section -->
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
@@ -12,11 +12,38 @@
 <body>
 
     <header>
-    </header>
-    <div class="container">
-        <h1>Contact info</h1>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><i class="fa-regular fa-building"></i>INFT 2202</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html"><i class="fa-solid fa-house"></i>Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="product.html">Product</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="service.html">Service</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html"><i class="fa-solid fa-user"></i>About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="contact.html"><i class="fa-solid fa-phone"></i>Contact Us</a>
+                        </li>
 
-        <div id="messageArea"></div>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container">
+        <h1>Edit Contact</h1>
 
         <div class="row justify-content-lg-center g-3">
             <form class ="col-lg-6 col-md-4 col-sm-4">
@@ -35,27 +62,15 @@
                     <input id="emailAddress" name="emailAddress" type="email" class="form-control"
                            aria-describedby="Email Address" aria-label="Email Address Input" required>
                 </div>
-                <div class="input-group mb-3">
-                    <span class="input-group-text">Your Message</span>
-                    <input id="message" name="message" class="form-control"
-                           aria-describedby="Message Area" aria-label="Message Area Input" required>
-                </div>
-                <div class="input-group mb-3">
-                    <input id="subscribeCheckbox" name="subscribeCheckbox" type="checkbox" class="form-check-input">
-                    <label class="form-check-label" for="subscribeCheckbox">Subscribe to our Contact List</label>
-                </div>
-                <button id="submitButton" type="submit" class="btn btn-primary"><i class="fa-solid fa-envelope"></i>Submit</button>
+
+                <button id="editButton" type="submit" class="btn btn-primary"><i class="fas fa-edit fa-lg"></i>Edit</button>
                 <button id="cancelButton" type="reset" class="btn btn-warning"><i class="fa-solid fa-rotate-left"></i>Cancel</button>
 
             </form>
 
-            <div class="col-lg-4 col-md-4">
-                <a href="contact-list.html" class="btn btn-primary"><i class="fa-solid fa-users"></i>Show Contact List</a>
-            </div>
-
         </div>
 
-    </div>
+    </main>
 
     <!-- Scripting Section -->
     <script src="./node_modules/jquery/dist/jquery.min.js"></script>
@@ -63,6 +78,5 @@
     <script src="scripts/namespace.js"></script>
     <script src="scripts/contact.js"></script>
     <script src="scripts/app.js"></script>
-
 </body>
 </html>
