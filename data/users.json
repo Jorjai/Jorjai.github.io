@@ -1,0 +1,25 @@
+{
+  "users": [
+
+    {
+      "DisplayName" : "Juan pe",
+      "EmailAddress" : "peju232323@gmail.com",
+      "username" : "pendejo",
+      "password" : "r32321321321321"
+    },
+    {
+      "DisplayName" : "papu carmelio",
+      "EmailAddress" : "messiesdios@gmail.com",
+      "username" : "Papu",
+      "password" : "r323weewqeqewq1321"
+    },
+    {
+      "DisplayName" : "Admin",
+      "EmailAddress" : "admin777@gmail.com",
+      "username" : "no",
+      "password" : "qwerty"
+    }
+  ]
+
+
+}
