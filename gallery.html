@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="./content/app.css">
+</head>
+
+<body>
+<header></header>
+<h1>Community Gallery</h1>
+
+<main class="container">
+    <div id="gallery" class="row"></div>
+</main>
+
+<div id="lightbox" class="lightbox">
+    <span id="closeBtn">&times;</span>
+    <img id="lightboxImg" src="" alt="">
+</div>
+
+<!-- Reload button -->
+<button id="reloadButton" class="reloadButton btn btn-primary">Reload Images</button>
+
+<!-- Scripting -->
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./scripts/gallery.js"></script>
+<script src="./scripts/namespace.js"></script>
+<script src="./scripts/app.js"></script>
+<script src="./scripts/user.js"></script>
+
+<footer class="bg-body-tertiary">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <p>&copy; 2024 Harmony Hub. All rights reserved.</p>
+            </div>
+            <div class="col-md-6 text-end">
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="privacy.html" class="text-black">Privacy Policy</a></li>
+                    <li class="list-inline-item"><a href="termsofservice.html" class="text-black">Terms of
+                        Service</a></li>
+                    <li class="list-inline-item"><a href="contact.html" class="text-black">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+
+</html>
+
+
+
+

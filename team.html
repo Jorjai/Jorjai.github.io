@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Our Team</title>
+
+    <!-- CSS section -->
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="./content/app.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><i class="fa-solid fa-people-group"></i>Harmony Hub</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html"><i class="fa-solid fa-house"></i>Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="portfolio.html"><i class="fa-solid fa-folder-open"></i>Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="Services.html"><i class="fa-solid fa-cubes"></i>Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="team.html"><i class="fa-solid fa-user"></i>Team</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html"><i class="fa-solid fa-person-through-window"></i>Blog</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Our Team</h1>
+
+        <div class="row">
+            <!-- Team member 1 -->
+            <div class="col-md-4">
+                <div class="team-member">
+                    <img src="./images/Picture_Mario.jpg" alt="Team Member 1">
+                    <h3>Mario Chavez</h3>
+                    <p>Web Developer</p>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1">Learn More</button>
+                </div>
+            </div>
+
+            <!-- Team member 2 -->
+            <div class="col-md-4">
+                <div class="team-member">
+                    <img src="./images/Picture_Meng.png" alt="Team Member 2">
+                    <h3>Meng Cai</h3>
+                    <p>Web Developer</p>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal2">Learn More</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Team member modals -->
+    <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="modal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal1Label">Mario Chavez</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Web Developer</p>
+                    <p>Student Number: 100895335</p>
+                    <p>Class: INFT2202</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="modal2Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal2Label">Meng Cai</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Web Developer</p>
+                    <p>Student Number: 100894240</p>
+                    <p>Class: INFT2202</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./scripts/app.js"></script>
+
+</body>
+<footer class="bg-body-tertiary">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <p>&copy; 2024 Harmony Hub. All rights reserved.</p>
+            </div>
+            <div class="col-md-6 text-end">
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="privacy.html" class="text-black">Privacy Policy</a></li>
+                    <li class="list-inline-item"><a href="termsofservice.html" class="text-black">Terms of Service</a></li>
+                    <li class="list-inline-item"><a href="contact.html" class="text-black">Contact Us</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+</html>

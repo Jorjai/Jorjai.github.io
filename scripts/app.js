@@ -1,3 +1,7 @@
+/**
+ *
+ *
+ */
 "use strict";
 
 (function (){
@@ -82,49 +86,15 @@
     function DisplayHomePage(){
         console.log("Called DisplayHomePage()");
 
-        $("#AboutUsBtn").on("click",() =>{
-            location.href = "about.html";
-        })
-
-        $("main").append(`<p id="MainParagraph" class="mt-3">This is my first paragraph</p>`);
-        $("body").append(`<article class="container">
-                                <p id="ArticleParagraph" class="mt-3">This is my article paragraph</p></article>`);
-
-        // let AboutUsButton = document.getElementById("AboutUsBtn")
-        //
-        // AboutUsButton.addEventListener("click",function(){
-        //     location.href = "about.html";
-        // });
-
-        // let MainContent = document.getElementsByTagName("main")[0];
-        // let MainParagraph = document.createElement("p");
-        //
-        // MainParagraph.setAttribute("id", "MainParagraph");
-        // MainParagraph.setAttribute("class", "mt-3");
-        //
-        // MainParagraph.textContent = "This is my first paragraph";
-        // MainContent.appendChild(MainParagraph);
-
-        // let FirstString = "This is";
-        // let SecondString = `${FirstString} the main paragraph`;
-        // MainParagraph.textContent = SecondString;
-        // MainContent.appendChild(MainParagraph);
-        //
-        // let DocumentBody = document.body;
-        // let Article = document.createElement("article");
-        // let ArticleParagraph = `<p id=ArticleParagraph" class="mt-5">This is my article paragraph</p:>`;
-        // Article.setAttribute("class","container");
-        // Article.innerHTML = ArticleParagraph;
-        // DocumentBody.appendChild(Article);
     }
 
-    function DisplayProductPage(){
-        console.log("Called DisplayProductPage()");
+    function DisplayPortfolioPage(){
+        console.log("Called DisplayPortfolioPage()");
 
     }
 
-    function DisplayAboutUsPage(){
-        console.log("Called DisplayAboutUsPage()");
+    function DisplayTeamPage(){
+        console.log("Called DisplayTeamPage()");
 
     }
 
@@ -150,6 +120,18 @@
 
     }
 
+    function DisplayBlogPage(){
+        console.log("Called DisplayBlogPage()");
+
+    }
+    function DisplayEventsPage(){
+        console.log("Called DisplayBlogPage()");
+
+    }
+    function DisplayGalleryPage(){
+        console.log("Called DisplayBlogPage()");
+
+    }
 
     function DisplayContactListPage(){
         console.log("Called DisplayContactListPage()");
@@ -264,57 +246,56 @@
     }
 
 
-    function DisplayLoginPage(){
+    function DisplayLoginPage() {
         console.log("Called DisplayLoginPage()");
 
         let messageArea = $("#messageArea");
         messageArea.hide();
 
-        $("#loginButton").on("click", function(){
+        $("#loginButton").on("click", function () {
+            $.getJSON("../data/users.json", function (data) {
+                let usernameValue = username.value;
+                let passwordValue = password.value;
 
-            let success = false;
-            let newUser = new core.User();
+                let user = data.users.find(user =>
+                    user.username === usernameValue && user.password === passwordValue );
 
-            $.get("./data/users.json",function(data){
+                if (user) {
+                    let newUser = new core.User();
+                    newUser.fromJSON(user);
 
-                for(const user of data.users){
-
-                    console.log(user);
-                    if(username.value === user.username && password.value === user.password){
-
-                        success = true;
-                        newUser.fromJSON(user);
-                        break;
-                    }
-                }
-
-
-                if(success){
+                    console.log(newUser);
 
                     sessionStorage.setItem("user", newUser.serialize());
-                    messageArea.remove("class").hide();
-                    location.href = "contact-list.html";
-                }else{
+                    messageArea
+                        .removeClass("alert-danger")
+                        .addClass("alert alert-success")
+                        .text("Welcome, " + newUser.username + "! Today's date is: " + getCurrentDate())
+                        .show();
+
+                    setTimeout(function () {
+                        location.href = "index.html";
+                    }, 3000); // Redirect after 2 seconds
+                } else {
                     $("#username").trigger("focus").trigger("select");
                     messageArea
+                        .removeClass("alert-success")
                         .addClass("alert alert-danger")
                         .text("Error: Invalid Login Credentials")
                         .show();
-
                 }
             });
-
         });
 
-        $("#cancelButton").on("click", function(){
-
+        $("#cancelButton").on("click", function () {
             document.forms[0].reset();
             location.href = "index.html";
-
         });
-
-
-
+    }
+    function getCurrentDate() {
+        const today = new Date();
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        return today.toLocaleDateString('en-US', options);
     }
 
 
@@ -332,14 +313,23 @@
             case "Home":
                 DisplayHomePage();
                 break;
+            case "Portfolio":
+                DisplayPortfolioPage();
+                break;
             case "Our Products":
-                DisplayProductPage();
-                break;
-            case "About Us":
-                DisplayAboutUsPage();
-                break;
-            case "Our Services":
                 DisplayServicesPage();
+                break;
+            case "Our Team":
+                DisplayTeamPage();
+                break;
+            case "Our Blog":
+                DisplayBlogPage()
+                break;
+            case "Events":
+                DisplayEventsPage();
+                break;
+            case "Gallery":
+                DisplayGalleryPage();
                 break;
             case "Contact Us":
                 DisplayContactUsPage();

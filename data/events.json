@@ -1,0 +1,19 @@
+[
+  {
+    "title": "Besame Mucho Austin 2024",
+    "date": "Saturday 02 March 2024",
+    "description": "Festival Location\n\nBesame Mucho Austin is located at Circuit of the Americas at 9201 Circuit of the Americas Blvd,  Austin, TX 78617",
+    "image": "./images/events/huge_avatar.jpg",
+    "registerUrl": "https://www.besamemuchofestival.com/austin",
+    "address": " 9201 Circuit of the Americas Blvd, Austin, TX 78617"
+  },
+  {
+    "title": "Rolling Loud California 2024 ",
+    "date": "Friday 15 March 2024 – Sunday 17 March 2024",
+    "description": "Headlined by Nicki Minaj, Post Malone, and Future X Metro Boomin, and featuring notable regional Mexican special guests Fuerza Regida, Junior H, and Natanael Cano, Rolling Loud California returns to Hollywood Park, on the grounds adjacent to SoFi Stadium, in Inglewood, CA.",
+    "image": "./images/events/RLCalifornia2024-FINALFINAL-FeedResized.jpg",
+    "registerUrl": "https://www.rollingloudca.com/",
+    "address": "Hollywood Park 3599 W Century Blvd Inglewood, CA 90305"
+
+  }
+]

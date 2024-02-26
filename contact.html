@@ -4,65 +4,114 @@
     <meta charset="UTF-8">
     <title>Contact Us</title>
 
-    <!-- CSS section -->
+    <!-- CSS -->
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css">
-    <link rel="stylesheet" href="content/app.css">
+    <link rel="stylesheet" href="./content/app.css">
 </head>
 <body>
 
-    <header>
-    </header>
-    <div class="container">
-        <h1>Contact info</h1>
+<header></header>
 
-        <div id="messageArea"></div>
-
-        <div class="row justify-content-lg-center g-3">
-            <form class ="col-lg-6 col-md-4 col-sm-4">
-                <div class="input-group mb-3">
-                    <span class="input-group-text"> Full Name</span>
-                    <input id ="fullName" name= "fullName" type="text" class="form-control"
-                           aria-describedby="Full Name" aria-label="Full Name Input" required>
-                </div>
-                <div class="input-group mb-3">
-                    <span class="form-label">contact number</span>
-                    <input id="contactNumber" name="contactNumber" type="tel" class="form-control"
-                           aria-describedby="Contact Number" aria-label="Contact Number Input" required>
-                </div>
-                <div class="input-group mb-3">
-                    <span class="form-label">Email Address</span>
-                    <input id="emailAddress" name="emailAddress" type="email" class="form-control"
-                           aria-describedby="Email Address" aria-label="Email Address Input" required>
-                </div>
-                <div class="input-group mb-3">
-                    <span class="input-group-text">Your Message</span>
-                    <input id="message" name="message" class="form-control"
-                           aria-describedby="Message Area" aria-label="Message Area Input" required>
-                </div>
-                <div class="input-group mb-3">
-                    <input id="subscribeCheckbox" name="subscribeCheckbox" type="checkbox" class="form-check-input">
-                    <label class="form-check-label" for="subscribeCheckbox">Subscribe to our Contact List</label>
-                </div>
-                <button id="submitButton" type="submit" class="btn btn-primary"><i class="fa-solid fa-envelope"></i>Submit</button>
-                <button id="cancelButton" type="reset" class="btn btn-warning"><i class="fa-solid fa-rotate-left"></i>Cancel</button>
-
-            </form>
-
-            <div class="col-lg-4 col-md-4">
-                <a href="contact-list.html" class="btn btn-primary"><i class="fa-solid fa-users"></i>Show Contact List</a>
+<div class="container">
+    <h1>Contact</h1>
+    <div class="row justify-content-lg-center g-3">
+        <form class="col-lg-6 col-md-4 col-sm-4" id="contactForm" novalidate>
+            <div class="input-group mb-3">
+                <span class="input-group-text">Full Name</span>
+                <input id="fullName" name="fullName" type="text" class="form-control"
+                       aria-describedby="Full Name" aria-label="Full Name Input" required>
             </div>
 
+            <div class="input-group mb-3">
+                <span class="input-group-text">Email Address</span>
+                <input id="emailAddress" name="emailAddress" type="email" class="form-control"
+                       aria-describedby="Email Address" aria-label="Email Address Input" required>
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text">Your Subject</span>
+                <input id="subject" name="subject" class="form-control"
+                       aria-describedby="Subject Area" aria-label="Subject Area Input" required>
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text">Your Message</span>
+                <input id="message" name="message" class="form-control"
+                       aria-describedby="Message Area" aria-label="Message Area Input" required>
+            </div>
+
+            <div class="input-group mb-3">
+                <input id="subscribeCheckbox" name="subscribeCheckbox" type="checkbox" class="form-check-input">
+                <label class="form-check-label"  for="subscribeCheckbox">Subscribe to our Contact List</label>
+            </div>
+
+            <button id="submitButton" type="submit" class="btn btn-primary"><i class="fas fa-envelope"></i> Submit</button>
+            <button id="cancelButton" type="reset" class="btn btn-warning"><i class="fas fa-undo"></i> Cancel</button>
+        </form>
+
+        <div class="modal" id="contactModal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Contact Form Submission</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="modalBody">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
         </div>
 
+        <div class="col-lg-6 col-md-4 col-sm-4">
+            <h2>Feedback</h2>
+            <div class="input-group mb-3">
+                <label for="rating" class="input-group-text">Rating</label>
+                <select class="form-select" id="rating">
+                    <option value="5">5 stars</option>
+                    <option value="4">4 stars</option>
+                    <option value="3">3 stars</option>
+                    <option value="2">2 stars</option>
+                    <option value="1">1 star</option>
+                </select>
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text">Comments</span>
+                <textarea id="comments" name="comments" class="form-control" aria-label="Comments Area"></textarea>
+            </div>
+
+            <button id="submitFeedbackButton" class="btn btn-primary"><i class="fas fa-comment"></i> Submit Feedback</button>
+
+            <div id="ajaxResponse" class="alert" role="alert" style="display: none;"></div>
+        </div>
     </div>
+</div>
 
-    <!-- Scripting Section -->
-    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="scripts/namespace.js"></script>
-    <script src="scripts/contact.js"></script>
-    <script src="scripts/app.js"></script>
-
+<!-- Scripting -->
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./scripts/app.js"></script>
+<script src="./scripts/contact.js"></script>
+<script src="./scripts/feedback.js"></script>
 </body>
+<footer class="bg-body-tertiary">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <p>&copy; 2024 Harmony Hub. All rights reserved.</p>
+            </div>
+            <div class="col-md-6 text-end">
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="privacy.html" class="text-black">Privacy Policy</a></li>
+                    <li class="list-inline-item"><a href="termsofservice.html" class="text-black">Terms of Service</a></li>
+                    <li class="list-inline-item"><a href="contact.html" class="text-black">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
 </html>

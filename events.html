@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <!-- CSS -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVkOlDDvNOYLnGdP3vA6JyVUK0-03xV6Y&libraries=places"></script>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="./content/app.css">
+</head>
+<body>
+<header>
+    <h1>Upcoming Events</h1>
+</header>
+
+<main id="eventsList" class="container"></main>
+<div id="map" style="height: 400px;"></div>
+
+<!-- Scripting -->
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./scripts/events.js"></script>
+<script src="./scripts/namespace.js"></script>
+<script src="./scripts/app.js"></script>
+<script src="./scripts/user.js"></script>
+</body>
+<footer class="bg-body-tertiary">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <p>&copy; 2024 Harmony Hub. All rights reserved.</p>
+            </div>
+            <div class="col-md-6 text-end">
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="privacy.html" class="text-black">Privacy Policy</a></li>
+                    <li class="list-inline-item"><a href="termsofservice.html" class="text-black">Terms of Service</a></li>
+                    <li class="list-inline-item"><a href="contact.html" class="text-black">Contact Us</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+</html>

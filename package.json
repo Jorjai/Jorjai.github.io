@@ -5,7 +5,9 @@
   "license": "MIT",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.5.1",
+    "@mui/icons-material": "^5.15.11",
     "bootstrap": "^5.3.2",
-    "jquery": "^3.7.1"
+    "jquery": "^3.7.1",
+    "react": "^18.2.0"
   }
 }

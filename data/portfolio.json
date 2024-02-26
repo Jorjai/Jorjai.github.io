@@ -1,0 +1,37 @@
+[
+  {
+    "heading": "C# Admissions Application",
+    "body": "Designed and implemented a student admission process, providing a clear and convenient interface for registration officers to perform CRUD operations on student records efficiently.",
+    "image": "./images/Screenshot_2.jpg"
+  },
+  {
+    "heading": "C# Card Deck",
+    "body": "Designed and implemented a card shuffler, with an option to draw certain cards and create new custom cards.",
+    "image": "./images/Screenshot_deckbuilder.jpg"
+  },
+  {
+    "heading": "C# Car Detailer Price",
+    "body": "This application calculates the price point of certain adjustments that are needed for a variety of cars.",
+    "image": "./images/Screenshot_1.jpg"
+  },
+  {
+    "heading": "VW Vento 2016",
+    "body": "This is a medium-class car, a 4-door Sedan car which can be diesel or gasoline.",
+    "image": "./images/WhatsApp Image 2024-01-07 at 10.28.53_2d386357.jpg"
+  },
+  {
+    "heading": "C# Student database",
+    "body": "This application saves certain student data into a database.",
+    "image": "./images/Screenshot_3.jpg"
+  },
+  {
+    "heading": "C# First Web Page",
+    "body": "This is a demonstration of how to set up a C# web page.",
+    "image": "./images/Screenshot_5.jpg"
+  },
+  {
+    "heading": "C# Hospital database",
+    "body": "This is a working database where it can save certain patient data.",
+    "image": "./images/Screenshot_6.jpg"
+  }
+]

@@ -2,24 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
 
     <!-- CSS section -->
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css">
-    <link rel="stylesheet" href="content/app.css">
+    <link rel="stylesheet" href="./content/app.css">
+
 </head>
 <body>
 
-    <header>
-    </header>
+    <header></header>
     <main class="container">
-        <h1>Welcome to Week our Website</h1>
-        <button id="AboutUsBtn" class="btn btn-primary">About Us</button>
+        <div class="slideshow-container">
+            <div class="mySlides" style="background-image: url('./images/image_page-0001.jpg');"></div>
+            <div class="mySlides" style="background-image: url('./images/si.jpg');"></div>
+            <h1>Welcome!</h1>
+            <h2> Click, Explore, and Enjoy the Harmony Hub </h2>
+        </div>
     </main>
+
 <script src="./node_modules/jquery/dist/jquery.min.js"></script>
 <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="scripts/app.js"></script>
+<script src="./scripts/app.js"></script>
+<script src="./scripts/image-slides.js"></script>
 
 </body>
+
+<footer class="bg-body-tertiary">
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <p>&copy; 2024 Harmony Hub. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-end">
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="privacy.html" class="text-black">Privacy Policy</a></li>
+                <li class="list-inline-item"><a href="termsofservice.html" class="text-black">Terms of Service</a></li>
+                <li class="list-inline-item"><a href="contact.html" class="text-black">Contact Us</a></li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+</footer>
 </html>
